@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Thống kê doanh thu</h2>
+
+<table border="1">
+  <tr>
+    <th>Loại</th>
+    <th>Doanh thu</th>
+    <th>Số lượng</th>
+    <th>Max</th>
+    <th>Min</th>
+    <th>Avg</th>
+  </tr>
+
+  <tr th:each="r : ${items}">
+    <td th:text="${r.category}"></td>
+    <td th:text="${r.revenue}"></td>
+    <td th:text="${r.quantity}"></td>
+    <td th:text="${r.maxPrice}"></td>
+    <td th:text="${r.minPrice}"></td>
+    <td th:text="${r.avgPrice}"></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Top khách hàng VIP</h2>
+
+<table border="1">
+  <tr>
+    <th>Username</th>
+    <th>Tổng tiền</th>
+    <th>Mua đầu</th>
+    <th>Mua cuối</th>
+  </tr>
+
+  <tr th:each="v : ${items}">
+    <td th:text="${v.username}"></td>
+    <td th:text="${v.totalMoney}"></td>
+    <td th:text="${v.firstDate}"></td>
+    <td th:text="${v.lastDate}"></td>
+  </tr>
+</table>
+</body>
+</html>
